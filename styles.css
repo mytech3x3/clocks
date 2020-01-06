@@ -1,0 +1,163 @@
+.clock {
+    position: relative;
+    margin: auto;
+    height: 300px;
+}
+
+.analog-clock {
+  width: 300px;
+  border-radius: 50%;
+  background-color: rgba(255 , 255, 255, .9);
+  border: 5px solid black;
+}
+
+.digital-clock {
+  height: 100px;
+  width: 450px;
+  border: 5px solid black;
+  background-color: rgba(255 , 255, 255, .9);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.digital-clock-text {
+  display: inline-block;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.hand {
+    --current-rotation: 0deg;
+    background-color: black;
+    position: absolute;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    transform: translateX(-50%) rotate(var(--current-rotation));
+    transform-origin: bottom;
+    left: 50%;
+    bottom: 50%;
+    z-index: 8;
+}
+
+.hour {
+    width: 10px;
+    height: 27%;
+}
+
+.minute {
+    width: 8px;
+    height: 45%;
+}
+.second {
+    width: 1%;
+    height: 45%;
+    background-color: rgb(32, 211, 110);
+}
+
+.dot {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.number{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: absolute;
+  font-size: 40px;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  
+} 
+
+.twelve{
+  left: 50%;
+  top: 15%; 
+} 
+
+.three{
+  left: 90%;
+  top: 50%;
+} 
+.six{
+  left: 50%;
+  top: 90%;
+} 
+.nine{
+  left: 10%;
+  top: 50%;
+} 
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
+    font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  }
+  
+  .header {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    font-weight: bold;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .column {
+    float: left;
+    width: 50%;
+    padding: 15px;
+    border-radius: 6px;
+    height: 120px;
+    height: auto;
+    border: solid black;
+  }
+
+  .column h2 {
+    text-align: center;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  @media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }
+  }
